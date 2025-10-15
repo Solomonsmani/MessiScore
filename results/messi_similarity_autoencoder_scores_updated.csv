@@ -1,0 +1,274 @@
+﻿Player,Team,Age,AutoencoderSimilarity
+Michael Olise,Bayern Munich,22.0,1.0
+Christian Pulisic,Milan,25.0,0.9974414
+Florian Wirtz,Leverkusen,21.0,0.99709797
+Matheus Cunha,Wolves,25.0,0.9957477
+Charles De Ketelaere,Atalanta,23.0,0.993042
+Malik Tillman,PSV Eindhoven,22.0,0.9891499
+Morgan Rogers,Aston Villa,22.0,0.9755199
+Cole Palmer,Chelsea,22.0,0.9592738
+Francisco Trincão,Sporting CP,24.0,0.9573792
+Rayan Cherki,Lyon,20.0,0.9562472
+Lamine Yamal,Barcelona,17.0,0.9561497
+Rafael Leão,Milan,25.0,0.94866824
+Bryan Mbeumo,Brentford,24.0,0.9473696
+Nicolás Paz,Como,19.0,0.94734335
+Ritsu Doan,Freiburg,26.0,0.942139
+Maghnes Akliouche,Monaco,22.0,0.9393581
+Kenan Yıldız,Juventus,19.0,0.93759084
+Raphinha,Barcelona,27.0,0.9373292
+Dejan Kulusevski,Tottenham,24.0,0.93453515
+Igor Paixão,Feyenoord,24.0,0.9138293
+Evann Guessand,Nice,23.0,0.9135834
+Eberechi Eze,Crystal Palace,26.0,0.9080641
+Leandro Trossard,Arsenal,29.0,0.9053352
+Alex Baena,Villarreal,23.0,0.903718
+Julián Álvarez,Atlético Madrid,24.0,0.9026289
+Noa Lang,PSV Eindhoven,25.0,0.8977561
+Antoine Semenyo,Bournemouth,24.0,0.89648414
+Vinicius Júnior,Real Madrid,24.0,0.8960172
+Kylian Mbappé,Real Madrid,25.0,0.8950814
+Gaëtan Perrin,Auxerre,28.0,0.8922068
+Luis Díaz,Liverpool,27.0,0.88834333
+Anthony Gordon,Newcastle Utd,23.0,0.8854047
+Mikkel Damsgaard,Brentford,24.0,0.88528585
+Kaoru Mitoma,Brighton,27.0,0.87738526
+Jakob Breum,Go Ahead Eag,20.0,0.87653553
+Alex Iwobi,Fulham,28.0,0.8752761
+Rodrygo,Real Madrid,23.0,0.87199926
+Mattia Zaccagni,Lazio,29.0,0.8673899
+Viktor Gyökeres,Sporting CP,26.0,0.85287595
+Luciano Valente,Groningen,20.0,0.8483175
+Ademola Lookman,Atalanta,26.0,0.8459314
+Zuriko Davitashvili,Saint-Étienne,23.0,0.84282804
+Amad Diallo,Manchester Utd,22.0,0.8424525
+Yann Gboho,Toulouse,23.0,0.84201956
+Jarrod Bowen,West Ham,27.0,0.83826125
+Alberto Moleiro,Las Palmas,20.0,0.83669996
+Moses Simon,Nantes,29.0,0.8341752
+Takefusa Kubo,Real Sociedad,23.0,0.83288586
+Dodi Lukebakio,Sevilla,26.0,0.83072937
+Mason Greenwood,Marseille,22.0,0.82776654
+Dani Raba,Leganés,28.0,0.81765723
+Chris Führich,Stuttgart,26.0,0.8151864
+Álex Berenguer,Athletic Club,29.0,0.80336726
+Himad Abdelli,Angers,24.0,0.799687
+Yoann Cathline,Utrecht,22.0,0.7994758
+Bradley Barcola,Paris S-G,21.0,0.7952839
+Alexander Isak,Newcastle Utd,24.0,0.7952565
+Nico Williams,Athletic Club,22.0,0.79318357
+Marcus Tavernier,Bournemouth,25.0,0.78137517
+Oliver Antman,Go Ahead Eag,22.0,0.7736877
+Levi Smans,Heerenveen,20.0,0.77312505
+Cody Gakpo,Liverpool,25.0,0.7662338
+Filip Krastev,Zwolle,22.0,0.7633841
+Raúl Moro,Valladolid,21.0,0.7617916
+Dan Ndoye,Bologna,23.0,0.75827265
+Richonell Margaret,RKC Waalwijk,23.0,0.75630987
+Hugo Ekitike,Eint Frankfurt,22.0,0.7557633
+Gabriel Strefezza,Como,27.0,0.75552046
+Sebastian Nanasi,Strasbourg,22.0,0.75240946
+Pedro Neto,Chelsea,24.0,0.751256
+Anis Hadj Moussa,Feyenoord,22.0,0.7507887
+Jacob Murphy,Newcastle Utd,29.0,0.74372613
+Isaac Palazón Camacho,Rayo Vallecano,29.0,0.73442566
+Noni Madueke,Chelsea,22.0,0.72949255
+Robin Hack,Gladbach,25.0,0.72884035
+Luis Henrique,Marseille,22.0,0.7272382
+Callum Hudson-Odoi,Nott'ham Forest,23.0,0.7255881
+João Pedro,Brighton,22.0,0.72501516
+Bernardo Silva,Manchester City,29.0,0.724439
+Mohammed Kudus,West Ham,23.0,0.7241583
+Bilal El Khannouss,Leicester City,20.0,0.7221074
+Kenneth Taylor,Ajax,22.0,0.7186762
+Sontje Hansen,NEC Nijmegen,22.0,0.7168119
+Dango Ouattara,Bournemouth,22.0,0.7102212
+Abde Ezzalzouli,Betis,22.0,0.70797634
+Ludovic Blas,Rennes,26.0,0.7014923
+Bryan Zaragoza,Osasuna,23.0,0.698161
+Yankuba Minteh,Brighton,20.0,0.69604385
+Gustav Isaksen,Lazio,23.0,0.6939963
+Ricardo Horta,Braga,29.0,0.6926321
+Enzo Millot,Stuttgart,22.0,0.69131505
+Marcus Thuram,Inter,26.0,0.6897739
+Morlaye Sylla,Arouca,26.0,0.68803287
+Lucas Paquetá,West Ham,26.0,0.6804571
+Anthony Elanga,Nott'ham Forest,22.0,0.6772945
+Tom Bischof,Hoffenheim,19.0,0.6772214
+Félix Correia,Gil Vicente FC,23.0,0.672711
+Alejandro Garnacho,Manchester Utd,20.0,0.668803
+Michel Vlap,Twente,27.0,0.66693354
+Vangelis Pavlidis,Benfica,25.0,0.6650504
+Carlos Vicente,Alavés,25.0,0.6532525
+Gabriel Martinelli,Arsenal,23.0,0.64776397
+Daan Rots,Twente,23.0,0.647158
+Fabio Vieira,Porto,24.0,0.6453996
+Domingos André Ribeiro Almeida,Valencia,24.0,0.6428349
+Lassine Sinayoko,Auxerre,24.0,0.6406256
+Federico Dimarco,Inter,26.0,0.6277207
+Mohamed Amoura,Wolfsburg,24.0,0.6203368
+Leo Sauer,NAC Breda,18.0,0.6155127
+Ringo Meerveld,Willem II,23.0,0.6154263
+Yeremi Pino,Villarreal,21.0,0.6133903
+Óscar Aranda,Famalicão,22.0,0.6118525
+Dennis Man,Parma,25.0,0.6055341
+Keane Lewis-Potter,Brentford,23.0,0.605389
+Riccardo Orsolini,Bologna,27.0,0.6041682
+João Carvalho,Estoril,27.0,0.5932112
+Andrea Cambiaso,Juventus,24.0,0.5913316
+Benedict Hollerbach,Union Berlin,23.0,0.58949554
+Juan Cruz,Leganés,24.0,0.58945835
+Victor Edvardsen,Go Ahead Eag,28.0,0.5893723
+Omari Hutchinson,Ipswich Town,20.0,0.58563495
+Kerem Aktürkoğlu,Benfica,25.0,0.58448875
+John McGinn,Aston Villa,29.0,0.5836673
+Dylan Mbayo,Zwolle,22.0,0.5812533
+Gabriel Vieira,Santa Clara,22.0,0.5773896
+Pepê,Porto,27.0,0.5768359
+Sebastiano Esposito,Empoli,22.0,0.5756825
+Mateo Retegui,Atalanta,25.0,0.5686054
+Takumi Minamino,Monaco,29.0,0.5685092
+Tete Morente,Lecce,27.0,0.5634515
+Nikola Vlašić,Torino,26.0,0.56285894
+Jonathan David,Lille,24.0,0.5579623
+Viktor Tsyhankov,Girona,26.0,0.5574758
+Gaetano Oristanio,Venezia,21.0,0.55667496
+Pablo Fornals,Betis,28.0,0.555712
+Lautaro Martínez,Inter,26.0,0.554111
+Paxten Aaronson,Utrecht,20.0,0.5526949
+Nuno Santos,Vitória,25.0,0.5360813
+Teun Koopmeiners,Juventus,26.0,0.53077364
+Moise Kean,Fiorentina,24.0,0.5302297
+Adam Hložek,Hoffenheim,22.0,0.52251947
+Farid El Melali,Angers,27.0,0.5174993
+Tomáš Suslov,Hellas Verona,22.0,0.508222
+Tyler Dibling,Southampton,18.0,0.5054221
+Keito Nakamura,Reims,24.0,0.50366616
+Fredrik Aursnes,Benfica,28.0,0.50336206
+Valentín Castellanos,Lazio,25.0,0.50061274
+Mahdi Camara,Brest,26.0,0.49741033
+Ilias Sebaoui,Heerenveen,22.0,0.49719492
+Serhou Guirassy,Dortmund,28.0,0.49034616
+Jonathan Burkardt,Mainz 05,24.0,0.4901069
+Yoane Wissa,Brentford,27.0,0.48485628
+Liam Delap,Ipswich Town,21.0,0.48133948
+Ange-Yoan Bonny,Parma,20.0,0.48113826
+John Mercado,AVS Futebol,22.0,0.47929254
+Jean-Philippe Mateta,Crystal Palace,27.0,0.4791974
+Alexis Claude-Maurice,Augsburg,26.0,0.47897193
+Kristoffer Peterson,Fortuna Sittard,29.0,0.46319917
+Erling Haaland,Manchester City,24.0,0.4613262
+Troy Parrott,AZ Alkmaar,22.0,0.4610218
+Miguel Reisinho,Boavista,25.0,0.45798656
+Tim Kleindienst,Gladbach,28.0,0.45152637
+Samu Omorodion,Porto,20.0,0.4486626
+Marvin Pieringer,Heidenheim,24.0,0.44469562
+Evanilson,Bournemouth,24.0,0.43882713
+Kodai Sano,NEC Nijmegen,20.0,0.4388084
+Clayton,Rio Ave,25.0,0.43628845
+Benjamin Šeško,RB Leipzig,21.0,0.43584988
+Lorenzo Colombo,Empoli,22.0,0.43472514
+Loïs Openda,RB Leipzig,24.0,0.43139663
+Santiago Castro,Bologna,19.0,0.4262987
+Shuto Machino,Holstein Kiel,24.0,0.42556968
+Arnaud Kalimuendo,Rennes,22.0,0.4225692
+Habib Diarra,Strasbourg,20.0,0.41676506
+Nicolas Jackson,Chelsea,23.0,0.4154258
+Junior Kadile,Almere City,21.0,0.4127361
+Pep Chavarría,Rayo Vallecano,26.0,0.41236058
+Tiago Tomás,Wolfsburg,22.0,0.40927312
+Valentino Lazaro,Torino,28.0,0.4082847
+Thierno Barry,Villarreal,21.0,0.40664253
+Tobias Lauritsen,Sparta R'dam,26.0,0.40638366
+Morgan Guilavogui,St. Pauli,26.0,0.40557793
+Matthis Abline,Nantes,21.0,0.40445265
+Jack Harrison,Everton,27.0,0.4028488
+Giuseppe Pezzella,Empoli,26.0,0.40091863
+Vinícius,Santa Clara,25.0,0.39721248
+Joelinton,Newcastle Utd,27.0,0.3953822
+Yanis Begraoui,Estoril,23.0,0.39303717
+Oskar Zawada,RKC Waalwijk,28.0,0.38375786
+Lucas Beltrán,Fiorentina,23.0,0.382942
+Brennan Johnson,Tottenham,23.0,0.38201556
+Javi Puado,Espanyol,26.0,0.3808019
+Gorka Guruzeta,Athletic Club,27.0,0.37886497
+Boulaye Dia,Lazio,27.0,0.37660173
+Suf Podgoreanu,Heracles Almelo,22.0,0.3709444
+Yassine Kechta,Le Havre,22.0,0.3677111
+Nicolás Domínguez,Nott'ham Forest,26.0,0.36534962
+Fábio Silva,Las Palmas,22.0,0.36342666
+Ermedin Demirović,Stuttgart,26.0,0.35908374
+Josué Casimir,Le Havre,22.0,0.3460301
+Thomas Robinet,Almere City,27.0,0.3452281
+Jochem van de Kamp,Almere City,20.0,0.34515807
+Dominic Solanke,Tottenham,26.0,0.34039363
+Patrick Dorgu,Lecce,19.0,0.33962032
+Andrea Pinamonti,Genoa,25.0,0.33736572
+Artem Dovbyk,Roma,27.0,0.3339679
+Thom van Bergen,Groningen,20.0,0.33193186
+Kevin Schade,Brentford,22.0,0.33132586
+Che Adams,Torino,28.0,0.33063415
+Lorenzo Lucca,Udinese,23.0,0.3302348
+Diego López,Valencia,22.0,0.3277844
+Christantus Uche,Getafe,21.0,0.32749704
+Lucas Stassin,Saint-Étienne,19.0,0.32746878
+Mikel Oyarzabal,Real Sociedad,27.0,0.32355013
+Kornelius Hansen,Almere City,23.0,0.32211706
+Ollie Watkins,Aston Villa,28.0,0.32043317
+Nikola Krstović,Lecce,24.0,0.31683776
+Morten Thorsby,Genoa,28.0,0.31561616
+Iliman Ndiaye,Everton,24.0,0.3146787
+Dany Mota,Monza,26.0,0.3077996
+Jorge de Frutos,Rayo Vallecano,27.0,0.30392978
+Róbert Boženík,Boavista,24.0,0.29783592
+Jonas Wind,Wolfsburg,25.0,0.2946135
+Elías Már Ómarsson,NAC Breda,29.0,0.29346064
+Emanuel Emegha,Strasbourg,21.0,0.2876971
+Cisse Sandra,Willem II,20.0,0.28651145
+Jørgen Strand Larsen,Wolves,24.0,0.28260037
+Jofre,Espanyol,23.0,0.28140035
+Patrick Cutrone,Como,26.0,0.2791321
+Johannes Eggestein,St. Pauli,26.0,0.27634308
+Marcos Vinicios Sorriso,Famalicão,23.0,0.2621204
+Issa Soumaré,Le Havre,23.0,0.25611374
+Zakaria Aboukhlal,Toulouse,24.0,0.25384882
+Kai Havertz,Arsenal,25.0,0.2501733
+Santiago Pierotti,Lecce,23.0,0.24614057
+Sandro Ramírez,Las Palmas,29.0,0.24324784
+Roberto Piccoli,Cagliari,23.0,0.24245283
+Isaac Romero,Sevilla,24.0,0.24177608
+Ezequiel Bullaude,Fortuna Sittard,23.0,0.23510632
+Oliver McBurnie,Las Palmas,28.0,0.23072466
+Jens Odgaard,Bologna,25.0,0.22363487
+Hugo Duro,Valencia,24.0,0.22255096
+Kiko Bondoso,Rio Ave,28.0,0.21621063
+Dylan Vente,Zwolle,25.0,0.2161502
+Sami Ouaissa,NEC Nijmegen,19.0,0.20258883
+Rúnar Þór Sigurgeirsson,Willem II,24.0,0.19400963
+Kikas,Estrela,25.0,0.18236056
+Alfonso Trezza,Arouca,25.0,0.16837594
+Jon Guridi,Alavés,29.0,0.16238305
+Kyan Vaesen,Willem II,23.0,0.15668961
+Vito van Crooy,NEC Nijmegen,28.0,0.15289354
+Jorg Schreuders,Groningen,19.0,0.12828693
+Cyriel Dessers,Rangers,29.0,0.106959194
+Rasmus Højlund,Manchester Utd,21.0,0.102662235
+Jérémy Livolant,Casa Pia,26.0,0.098654866
+Hamza Igamane,Rangers,21.0,0.09109774
+Amin Sarr,Hellas Verona,23.0,0.08684561
+Ronan Hale,Ross County,25.0,0.08379468
+Adama Sidibeh,St Johnstone,26.0,0.05855319
+Václav Černý,Rangers,26.0,0.055788815
+Sam Dalby,Dundee United,24.0,0.041228354
+Makenzie Kirk,St Johnstone,20.0,0.04098943
+Toyosi Olusanya,St Mirren,26.0,0.030634403
+Lawrence Shankland,Hearts,28.0,0.028201342
+Nicolas-Gerrit Kühn,Celtic,24.0,0.025657296
+Fraser Murray,Kilmarnock,25.0,0.021819085
+Glenn Middleton,Dundee United,24.0,0.02040115
+Noah Chilvers,Ross County,23.0,0.017051637
+Kevin Nisbet,Aberdeen,27.0,0.013261884
+Scott Tiffoney,Dundee,25.0,0.010452837
+Daizen Maeda,Celtic,26.0,0.0077988207
+Luca Stephenson,Dundee United,20.0,0.0076875687
+Tom Sparrow,Motherwell,21.0,0.0
