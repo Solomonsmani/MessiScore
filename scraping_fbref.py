@@ -5,12 +5,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 import time
 
-# --- הגדרות דפדפן ---
+# --- Browser setup ---
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-# --- מזהי טבלאות לפי קטגוריה ---
+# --- Table IDs by category ---
 table_ids = {
     "stats_standard": "stats_standard",
     "stats_passing": "stats_passing",
@@ -19,8 +19,7 @@ table_ids = {
     "stats_gca": "stats_gca",
     "stats_passing_types": "stats_passing_types"
 }
-
-# --- מילון כתובות לפי ליגות ---
+# --- URLs by league ---
 tables = {
     "England": [
         "https://fbref.com/en/comps/9/stats/Premier-League-Stats",
@@ -108,7 +107,7 @@ all_players = []
 
 for league_name, urls in tables.items():
     for url in urls:
-        # זיהוי הטבלה לפי URL
+        # Identify table type based on the URL
         if "/passing/" in url:
             table_id = "stats_passing"
         elif "/shooting/" in url:
@@ -120,11 +119,11 @@ for league_name, urls in tables.items():
         elif "/passing_types/" in url:
             table_id = "stats_passing_types"
         else:
-            table_id = "stats_standard"  # URL בסיסי
+            table_id = "stats_standard"  # Base stats URL
 
         print(f"Scraping {league_name} - {table_id}...")
         driver.get(url)
-        time.sleep(6)  # המתן לטעינת ה-JS
+        time.sleep(6)  # Wait for JS to fully load
 
         try:
             table = driver.find_element(By.ID, table_id)
@@ -135,8 +134,8 @@ for league_name, urls in tables.items():
             all_players.append(df)
         except Exception as e:
             print(f"❌ Failed to scrape {league_name} [{table_id}]: {e}")
-
-# --- שמירה לקובץ ---
+            
+# --- Save to CSV ---
 full_df = pd.concat(all_players, ignore_index=True)
 full_df.to_csv("fbref_new_players_updated_2024_25.csv", index=False)
 driver.quit()
