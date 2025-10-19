@@ -133,8 +133,8 @@ for league_name, urls in tables.items():
             df["Table"] = table_id
             all_players.append(df)
         except Exception as e:
-            print(f"❌ Failed to scrape {league_name} [{table_id}]: {e}")
-            
+            print(f"❌ Failed to scrape {league_name} [{table_id}]: {e}")   
+         
 # --- Save to CSV ---
 full_df = pd.concat(all_players, ignore_index=True)
 full_df.to_csv("fbref_new_players_updated_2024_25.csv", index=False)

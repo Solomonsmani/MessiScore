@@ -8,13 +8,13 @@ from sklearn.cluster import KMeans
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense
 from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import EarlyStopping
 
 # --- Load dataset ---
 df = pd.read_csv("fbref_new_players_updated_2024_25_with_per90.csv", low_memory=False)
 
 # Keep only relevant positions
-# positions = ['MF', 'FW', 'CM', 'LM', 'RM', 'WM', 'LW', 'RW', 'AM', 'LB', 'RB', 'FB']
-allowed_positions = ['LW', 'RW', 'AM', 'FW']
+allowed_positions = ['LW', 'RW', 'AM', 'FW','LM','RM']
 df = df[df["Unnamed: 3_level_0_Pos"].apply(lambda x: any(pos in x for pos in allowed_positions))]
 
 # --- Features ---
@@ -22,7 +22,7 @@ features = [
     "Per 90 Minutes_Gls", "Per 90 Minutes_Ast", "Per 90 Minutes_G+A", "Per 90 Minutes_G-PK",
     "Standard_G/Sh", "Per 90 Minutes_xG", "Per 90 Minutes_xAG", "Per 90 Minutes_npxG+xAG",
     "SCA_SCA90", "GCA_GCA90",
-    "Standard_SoT/90", "Take-Ons_Succ_per90","Take-Ons_Succ%", "Take-Ons_Tkld%", "Touches_Att Pen_per90", "Touches_Att 3rd_per90",
+    "Standard_SoT/90", "Take-Ons_Succ_per90","Take-Ons_Succ%","Take-Ons_Tkld%", "Touches_Att Pen_per90", "Touches_Att 3rd_per90",
     "Unnamed: 28_level_0_PPA_per90", "Unnamed: 27_level_0_1/3_per90","Pass Types_TB_per90", "Pass Types_Sw_per90", "Unnamed: 26_level_0_KP_per90", 
     "Carries_Carries_per90", "Carries_TotDist_per90", "Carries_PrgDist_per90", "Carries_1/3_per90", "Carries_CPA_per90",
     "Progression_PrgC_per90", "Progression_PrgP_per90", "Progression_PrgR_per90",
@@ -34,12 +34,12 @@ df["Playing Time_Starts"] = pd.to_numeric(df["Playing Time_Starts"], errors='coe
 df["Unnamed: 5_level_0_Age"] = pd.to_numeric(df["Unnamed: 5_level_0_Age"], errors='coerce')
 
 df = df[
-    (df["Playing Time_Min"] > 1800) &
-    (df["Playing Time_Starts"] >= 20) 
-      & (df["Unnamed: 5_level_0_Age"] < 30)
+    (df["Playing Time_Min"] > 1700) &
+    (df["Playing Time_Starts"] >= 18) 
 ]
 
 # --- Messi's stats ---
+# These are CAREER AVERAGES.
 messi_row = pd.DataFrame({
     "Per 90 Minutes_Gls": [0.95], "Per 90 Minutes_Ast": [0.43], "Per 90 Minutes_G+A": [1.38], "Per 90 Minutes_G-PK": [0.84],
     "Standard_G/Sh":[0.15], "Per 90 Minutes_xG": [0.64], "Per 90 Minutes_xAG": [0.39], "Per 90 Minutes_npxG+xAG": [0.96],
@@ -48,7 +48,7 @@ messi_row = pd.DataFrame({
     "Unnamed: 28_level_0_PPA_per90": [3.88], "Unnamed: 27_level_0_1/3_per90":[7.01],"Pass Types_TB_per90":[1.31], "Pass Types_Sw_per90":[0.5], "Unnamed: 26_level_0_KP_per90":[2.58], 
     "Carries_Carries_per90":[57.7], "Carries_TotDist_per90":[351.4], "Carries_PrgDist_per90":[182.5], "Carries_1/3_per90":[5.16], "Carries_CPA_per90":[1.8],
     "Progression_PrgC_per90": [5.43], "Progression_PrgP_per90": [10.3], "Progression_PrgR_per90": [7.28],
-    "Unnamed: 1_level_0_Player": ["Lionel Messi"], "Unnamed: 4_level_0_Squad": ["Inter Miami"], "Unnamed: 5_level_0_Age": [38]
+    "Unnamed: 1_level_0_Player": ["Lionel Messi"], "Unnamed: 4_level_0_Squad": ["Career Average"], "Unnamed: 5_level_0_Age": [38] # Age is also a bit ambiguous here
 })
 
 # --- Prepare data ---
@@ -67,7 +67,7 @@ X_scaled = scaler.fit_transform(df_with_messi)
 
 # --- AutoEncoder ---
 input_dim = X_scaled.shape[1]
-encoding_dim = 10
+encoding_dim = 10 
 
 input_layer = Input(shape=(input_dim,))
 encoded = Dense(16, activation='relu')(input_layer)
@@ -77,8 +77,21 @@ decoded = Dense(input_dim, activation='linear')(decoded)
 
 autoencoder = Model(input_layer, decoded)
 encoder = Model(input_layer, encoded)
-autoencoder.compile(optimizer=Adam(learning_rate=0.01), loss='mse')
-autoencoder.fit(X_scaled, X_scaled, epochs=100, batch_size=32, shuffle=True, verbose=0)
+
+optimizer = Adam(learning_rate=0.001) 
+
+early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
+
+autoencoder.compile(optimizer=optimizer, loss='mse')
+
+
+autoencoder.fit(X_scaled, X_scaled, 
+                epochs=200, # Increased epochs
+                batch_size=32, 
+                shuffle=True, 
+                verbose=0, 
+                validation_split=0.1, # Use 10% of data for validation
+                callbacks=[early_stopping]) # Add the callback
 
 # --- Latent space ---
 X_latent = encoder.predict(X_scaled)
@@ -100,7 +113,10 @@ manhattan_dist = manhattan_distances(X_latent_wo_messi, messi_latent).flatten()
 manhattan_sim = 1 - (manhattan_dist / manhattan_dist.max())
 
 # --- KMeans ---
-kmeans = KMeans(n_clusters=14, random_state=42, n_init='auto') 
+
+k_optimal = 8 # <-- THIS VALUE BASED ON THE ELBOW METHOD
+
+kmeans = KMeans(n_clusters=k_optimal, random_state=seed_value, n_init='auto') 
 kmeans_labels = kmeans.fit_predict(X_scaled)
 messi_cluster = kmeans_labels[-1]
 messi_cluster_center = kmeans.cluster_centers_[messi_cluster]
@@ -116,12 +132,23 @@ euclidean_sim_norm = scaler_score.fit_transform(euclidean_sim.reshape(-1, 1)).fl
 manhattan_sim_norm = scaler_score.fit_transform(manhattan_sim.reshape(-1, 1)).flatten()
 
 # --- Final score ---
+weights = {
+    'cosine': 0.20,
+    'autoencoder': 0.25,
+    'kmeans': 0.35,
+    'manhattan': 0.10,
+    'euclidean': 0.10
+}
+
+# Check to make sure weights add up to 1
+assert np.isclose(sum(weights.values()), 1.0), "Weights must sum to 1.0"
+
 final_score = (
-    0.2 * cos_sim_norm +
-    0.25 * autoencoder_similarities_norm +
-    0.35 * kmeans_scores_continuous_norm +
-    0.1 * manhattan_sim_norm +
-    0.1 * euclidean_sim_norm
+    weights['cosine'] * cos_sim_norm +
+    weights['autoencoder'] * autoencoder_similarities_norm +
+    weights['kmeans'] * kmeans_scores_continuous_norm +
+    weights['manhattan'] * manhattan_sim_norm +
+    weights['euclidean'] * euclidean_sim_norm
 )
 
 # --- Player Info (excluding Messi) ---
@@ -162,3 +189,5 @@ autoencoder_result.to_csv("results_per90/messi_similarity_autoencoder_scores_upd
 kmeans_result.to_csv("results_per90/messi_similarity_kmeans_scores_updated.csv", index=False, encoding='utf-8-sig')
 Euclidean_result.to_csv("results_per90/messi_similarity_full_with_Euclidean_distances_updated.csv", index=False, encoding='utf-8-sig')
 Manhattan_result.to_csv("results_per90/messi_similarity_full_with_Manhattan_distances_updated.csv", index=False, encoding='utf-8-sig')
+
+print("--- All results saved. ---")
