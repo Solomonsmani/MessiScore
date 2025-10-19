@@ -48,7 +48,7 @@ This ensemble approach helps uncover players similar to Messi not just by raw st
 * `messi_similarity_full_with_Euclidean_distances_updated.csv`: Rankings by Euclidean similarity.
 * `messi_similarity_full_with_Manhattan_distances_updated.csv`: Rankings by Manhattan similarity.
 
-## Example Output: Top 5 Messi-like Players (Updated)
+## Example Output: Top 5 Messi-like Players
 
 | Player        | Team          | Age | Final Score |
 | ------------- | ------------- | --- | ----------- |
