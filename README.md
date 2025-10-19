@@ -52,11 +52,11 @@ This ensemble approach helps uncover players similar to Messi not just by raw st
 
 | Player        | Team          | Age | Final Score |
 | ------------- | ------------- | --- | ----------- |
-| Michael Olise | Bayern Munich | 22  | 0.993       |
+| Michael Olise | Bayern Munich | 22  | 0.985       |
 | Florian Wirtz | Leverkusen    | 21  | 0.967       |
-| Lamine Yamal  | Barcelona     | 17  | 0.910       |
-| Rayan Cherki  | Lyon          | 20  | 0.906       |
-| Cole Palmer   | Chelsea       | 22  | 0.895       |
+| Rayan Cherki  | Lyon          | 20  | 0.958       |
+| Lamine Yamal  | Barcelona     | 17  | 0.945       |
+| Désiré Doué   | PSG           | 19  | 0.942       |
 
 ## How to Run
 
